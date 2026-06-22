@@ -1,19 +1,22 @@
-/* ========== BASE RESET ========== */
+:root {
+    color-scheme: light dark;
+--background-color: light-dark( #ec489940, #0b0b10); 
+--font: light-dark (#0b0b10, white);
+--h2: light-dark( #0b0b10, #ec489914);
+--kleur: light-dark (#0b0b10,#ffffff0a );
+}
+
 body {
     margin: 0;
     font-family: system-ui, sans-serif;
-
-    /* 🔥 zelfde dark background als homepage */
-    background: radial-gradient(circle at top, #141421, #0b0b10);
+background-color: var(--background-color);
     color: #e5e7eb;
 }
 
-/* ========== HERO ========== */
 .hero {
     text-align: center;
     padding: 100px 20px;
 
-    /* 🔥 zelfde pink glow gradient */
     background: radial-gradient(circle at top left, #ec4899, #0f0f14 60%);
     color: white;
 }
@@ -26,7 +29,6 @@ body {
     opacity: 0.85;
 }
 
-/* ========== TIMELINE WRAPPER ========== */
 .timeline {
     position: relative;
     max-width: 900px;
@@ -34,7 +36,6 @@ body {
     padding: 20px;
 }
 
-/* centrale lijn (zelfde stijl als homepage) */
 .timeline::before {
     content: "";
     position: absolute;
@@ -45,19 +46,15 @@ body {
     background: linear-gradient(#ec4899, transparent);
     transform: translateX(-50%);
     opacity: 0.25;
-
     height: 100%;
 }
 
-/* ========== TALK CARD ========== */
 .talk {
     position: relative;
     width: 45%;
     padding: 22px;
     margin-bottom: 60px;
 
-    /* 🔥 dark glass card */
-    background: rgba(255, 255, 255, 0.04);
     border: 1px solid rgba(236, 72, 153, 0.15);
     border-radius: 16px;
 
@@ -66,22 +63,19 @@ body {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* hover effect (zelfde vibe als homepage cards) */
 .talk:hover {
     transform: translateY(-8px) scale(1.01);
     box-shadow: 0 20px 50px rgba(236, 72, 153, 0.15);
 }
 
-/* links/rechts layout blijft */
 .talk:nth-child(odd) {
     left: 0;
 }
-
+/* chatgpt */
 .talk:nth-child(even) {
     left: 55%;
 }
 
-/* ========== DOT OP TIMELINE ========== */
 .talk::before {
     content: "";
     position: absolute;
@@ -98,12 +92,11 @@ body {
 .talk:nth-child(odd)::before {
     right: -38px;
 }
-
+/* chatgpt */
 .talk:nth-child(even)::before {
     left: -38px;
 }
 
-/* ========== TAG ========== */
 .tag {
     display: inline-block;
     font-size: 12px;
@@ -116,7 +109,6 @@ body {
     margin-bottom: 10px;
 }
 
-/* ========== TITELS ========== */
 h2 {
     margin: 0;
     color: #f472b6;
@@ -129,7 +121,6 @@ h3 {
     color: #e879f9;
 }
 
-/* ========== TEXT ========== */
 p {
     color: #d1d5db;
     line-height: 1.7;
